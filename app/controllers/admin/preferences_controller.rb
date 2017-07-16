@@ -6,7 +6,7 @@ class Admin::PreferencesController < ApplicationController
   def update
     @preference = Preference.find(params[:id])
     @preference.update(preference_params)
-    redirect_to :index
+    redirect_to admin_preferences_path
   end
 
   private
